@@ -80,20 +80,20 @@ class Frame2:
 
         bt4 = Button(
             self.__frame2,
-            text="Chương trình đào tạo",
+            text="",
             font=("Arial", 20, "bold"),
             width=283,
             height=50,
             image=imgbt,
             compound="center",
-            command=self.__ctdt,
+            command=self.__CommingSoon,
         )
         bt4.image_names = imgbt
         bt4.place(x=10, y=459)
 
         bt5 = Button(
             self.__frame2,
-            text="Comming Soon",
+            text="",
             font=("Arial", 20, "bold"),
             width=283,
             height=50,
@@ -234,6 +234,7 @@ class Frame2:
             connect.close()
         else:
             messagebox.showwarning("Error", "Bạn chưa rời lớp học")
+            
 
     def __ctdt(self):
         if self.__camOn == 0:
@@ -287,17 +288,11 @@ class Frame2:
 
 
             set.place(x = 55, y = 160)
-            # for i in range(0,30):
-            #     for j in range(0,6):
-            #         e = Entry(lb, width=20, fg='blue',
-            #                    font=('Arial',16,'bold'))
-                 
-            #         e.grid(row=i, column=j)
-            #         e.insert(END,"Nam")
             lb.place(x=310, y=10)
           
         else:
             messagebox.showwarning("Error", "Bạn chưa rời lớp học")
+
 
     def __updateInfo(self):
         if self.__camOn == 0:
@@ -335,7 +330,7 @@ class Frame2:
                 text="Cập nhật",
                 fg="Green",
                 font=("Arial", 20, "bold"),
-                command=lambda e: self.__modifyInfo(lst, frame3),
+                command=lambda: self.__modifyInfo(lst, frame3),
             ).place(
                 x=280,
                 y=490,

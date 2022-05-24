@@ -195,12 +195,13 @@ class MyFrame:
                     + "')"
                 )
                 firebase.uploadDatabase()
+                messagebox.showinfo("OK", "Thêm thành công")
             elif isRecordExists == 1:
                 messagebox.showwarning("Warning", "ID đã có người sử dụng")
             self.__connect.commit()
             self.__connect.close()
             self.__master.unbind("<Return>")
-            self.__mainframe.forget()
+            #self.__mainframe.forget()
         except (
             MyException.IDException,
             MyException.PWException,
